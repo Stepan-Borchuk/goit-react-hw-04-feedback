@@ -1,7 +1,7 @@
 import { Box } from '../box/Box';
 import { Buttons } from './Buttons.styled';
 
-export const Options = ({ onFeedback, options }) => {
+export const FeedbackOptions = ({ onLeaveFeedback, options }) => {
   return (
     <Box
       m={0}
@@ -14,7 +14,7 @@ export const Options = ({ onFeedback, options }) => {
     >
       {options.map(button => (
         <li key={button}>
-          <Buttons type="button" onClick={() => onFeedback(button)}>
+          <Buttons type="button" onClick={() => onLeaveFeedback(button)}>
             {button}
           </Buttons>
         </li>

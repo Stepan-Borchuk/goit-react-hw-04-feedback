@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import { Box } from './box/Box';
-import { Options } from './butons/Buttons';
+import { FeedbackOptions } from './butons/Buttons';
 import { Statistics } from './statistics/Statistics';
 import { Title } from './App.styled';
 
@@ -50,7 +50,10 @@ export class App extends Component {
       >
         <Box as="section">
           <Title>Please leave feedback</Title>
-          <Options options={buttonsArray} onFeedback={this.handleFeedback} />
+          <FeedbackOptions
+            options={buttonsArray}
+            onLeaveFeedback={this.handleFeedback}
+          />
         </Box>
 
         <Box as="section" display="flex" flexDirection="column" width="50%">
